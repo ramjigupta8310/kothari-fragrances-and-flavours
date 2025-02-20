@@ -85,7 +85,7 @@ const Home = () => {
       </section>
 
       {/* Let's Connect Section */}
-      <section id="connect" className="flex justify-center">
+      <section id="connect" className="flex justify-center pt-20">
         <div className="px-8 w-full md:px-0 md:w-[90%] lg:w-[80%] xl:w-[70%]">
           <h2 className="text-2xl md:text-4xl font-semibold text-center">Let’s Connect</h2>
           <p className="mt-4 max-w-2xl mx-auto text-gray-700 px-6 text-center">
