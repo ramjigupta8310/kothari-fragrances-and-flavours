@@ -22,12 +22,12 @@ const Home = () => {
     <div>
       <header className="bg-white shadow-md fixed w-full top-0 left-0 z-50">
         <div className="px-[2%] md:px-[4%] py-4 flex justify-between items-center">
-          <img src='/Logo Kothari1.png' alt="Logo" />
+          <Link to="/"><img src='/Logo Kothari1.png' alt="Logo" /></Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex gap-x-8">
             {navLinks.map((link, i) => (
-              <a key={i} href={`/#${link.id}`} className="hover:text-blue-500">
+              <a key={i} href={`#${link.id}`} className="hover:text-blue-500">
                 {link.name}
               </a>
             ))}
@@ -44,7 +44,7 @@ const Home = () => {
           <ul className="flex flex-col gap-y-3 px-4 py-4">
             {navLinks.map((link, i) => (
               <li key={i}>
-                <a href={`/#${link.id}`} className="hover:text-blue-500">
+                <a href={`#${link.id}`} className="hover:text-blue-500">
                   {link.name}
                 </a>
               </li>

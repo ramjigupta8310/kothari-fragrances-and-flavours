@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -7,9 +8,7 @@ const Footer = () => {
                 <div className="px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
 
                     {/* First Column - Logo */}
-                    <div>
-                        <img src="/Logo Kothari1.png" alt="Logo" />
-                    </div>
+                    <Link to="/"><img src='/Logo Kothari1.png' alt="Logo" /></Link>
 
                     {/* Second Column - Fragrances */}
                     <div>
