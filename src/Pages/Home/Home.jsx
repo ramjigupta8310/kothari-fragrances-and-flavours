@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import Banner from '../Assets/Banner.png'
 import { Link } from "react-router-dom";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
+import Flavours from "../../Components/Flavours";
+import Fragrances from "../../Components/Fragrances";
+import WhyChooseUs from "../../Components/WhyChooseUs";
 
 const navLinks = [
   { name: "About Us", id: "about-us" },
-  { name: "Why Choose Us", id: "why-choose" },
+  { name: "Why Choose Us", id: "why-choose-us" },
   { name: "Fragrances", id: "fragrances" },
   { name: "Flavours", id: "flavours" },
   { name: "Let’s Connect", id: "connect" },
@@ -17,6 +20,9 @@ const navLinks = [
 const Home = () => {
 
   const [isOpen, setIsOpen] = useState(false); // For Hamburger Menu
+
+
+  console.log("component is rendering")
 
   return (
     <div>
@@ -65,9 +71,9 @@ const Home = () => {
       <section id="about-us" className="py-24 flex justify-center">
         <div className="text-center max-w-2xl mx-auto text-gray-700 px-6">
           <p className="tracking-[0.3em] sm:tracking-[0.4em] md:tracking-[0.5em] font-semibold">
-            W h o &nbsp; W E &nbsp; A r e
+            W h o &nbsp; W E &nbsp; A R E
           </p>
-          <h2 className="mt-3 text-2xl md:text-4xl font-semibold">About Us</h2>
+          <h2 className="mt-3 text-2xl md:text-4xl font-semibold text-black">About Us</h2>
           <p className="mt-4">
             Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
             consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
@@ -83,6 +89,16 @@ const Home = () => {
           </p>
         </div>
       </section>
+
+      {/* Why Choose Us */}
+      <WhyChooseUs />
+
+      {/* Fragrances Section */}
+      <Fragrances />
+
+
+      {/* Flavours Section */}
+      <Flavours />
 
       {/* Let's Connect Section */}
       <section id="connect" className="flex justify-center pt-20">
@@ -136,7 +152,7 @@ const Home = () => {
       </section>
 
       {/* Contact Us Section*/}
-      <section id="contact" className="py-24 text-center">
+      <section id="contact" className="my-12 py-16 text-center bg-[rgba(235,235,129,0.2)]">
         {/* Contact Us Heading */}
         <h2 className="text-2xl md:text-4xl font-semibold">Contact Us</h2>
         <p className="mt-4 max-w-2xl mx-auto text-gray-700 px-6">
@@ -179,30 +195,3 @@ const Home = () => {
 };
 
 export default Home;
-
-{/* Products */ }
-{/* <section id="products" className="py-16 bg-gray-200">
-        <div className="container mx-auto px-6">
-          <h2 className="text-2xl font-bold text-center">What We Have</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-            {["Fragrances", "Flavours", "Personal Care", "Home Care"].map((item, i) => (
-              <div key={i} className="bg-white p-6 shadow rounded text-center">
-                <h3 className="font-semibold">{item}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-{/* Contact */ }
-{/* <section id="contact" className="py-16 px-6 bg-white">
-        <div className="container mx-auto">
-          <h2 className="text-2xl font-bold text-center">Let's Connect</h2>
-          <form className="max-w-lg mx-auto mt-6 bg-gray-100 p-6 rounded shadow">
-            <input type="text" placeholder="Name" className="block w-full p-2 mb-4 border rounded" />
-            <input type="email" placeholder="Email" className="block w-full p-2 mb-4 border rounded" />
-            <textarea placeholder="Message" className="block w-full p-2 mb-4 border rounded"></textarea>
-            <button className="w-full bg-blue-500 text-white py-2 rounded">Submit</button>
-          </form>
-        </div>
-      </section> */}
