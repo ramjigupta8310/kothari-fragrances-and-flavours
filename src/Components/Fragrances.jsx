@@ -110,7 +110,7 @@ const Fragrances = () => {
                     </div>
 
                     {/* Thumbnail Images */}
-                    <div className={`flex items-center justify-center gap-1 sm:gap-3 xl:gap-4 2xl:gap-6 ${styles["hide-scrollbar"]} pr-2 sm:pr-6 lg:pr-0`}>
+                    <div className={`flex items-center gap-1 sm:gap-3 xl:gap-4 2xl:gap-6 ${styles["hide-scrollbar"]} pr-2 sm:pr-6 lg:pr-0`}>
                         {images.map((img, index) => (
                             <div key={index} className="flex flex-col flex-shrink-0">
                                 <img
