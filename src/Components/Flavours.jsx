@@ -5,6 +5,7 @@ import { GrLinkPrevious, GrLinkNext } from "react-icons/gr";
 const Flavours = () => {
     const images = [
         { src: "/img1.avif", name: "Vanilla Strawberry", description: "lorem10Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It ha" },
+
         { src: "/img2.avif", name: "Strawberry Delight", description: "Des2" },
         { src: "/img3.avif", name: "Mango Bliss Strawberry", description: "Des3" },
         { src: "/img4.avif", name: "Chocolate Strawberry", description: "Des4" },
@@ -28,19 +29,19 @@ const Flavours = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             nextImage();
-        }, 300000);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, []);
     return (
         <>
             <section id="flavours" className="grid grid-cols-1 lg:grid-cols-2 gap-10 
-            pt-[6rem] bg-[rgba(255,255,0,0.13)] py-16 mt-20">
+            pt-[6rem] bg-[rgba(255,255,0,0.03)] py-16 mt-20">
 
                 {/* Left Section Img Slider */}
                 <div className="flex items-center gap-1 sm:gap-3 xl:gap-4 2xl:gap-6 pr-2 sm:pr-10 lg:pr-0">
                     {/* Thumbnail Images */}
-                    <div className={`flex items-center gap-1 sm:gap-3 xl:gap-4 2xl:gap-6 ${styles["hide-scrollbar"]} pr-2 sm:pr-6 lg:pr-0`}>
+                    <div className={`flex items-start gap-1 sm:gap-3 xl:gap-4 2xl:gap-6 ${styles["hide-scrollbar"]} pr-2 sm:pr-6 lg:pr-0`}>
                         {images.map((img, index) => (
                             <div key={index} className="flex flex-col flex-shrink-0">
                                 <img

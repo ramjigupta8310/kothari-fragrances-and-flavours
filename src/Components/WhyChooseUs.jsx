@@ -14,7 +14,7 @@ const boxes = [
 const WhyChooseUs = () => {
     return (
         <section id="why-choose-us" className="grid grid-cols-1 lg:grid-cols-2 gap-10
-                pt-[6rem] py-16 px-6 md:px-8 lg:px-12 xl:px-20 bg-[rgba(255,255,0,0.13)]">
+                pt-[6rem] py-16 px-6 md:px-8 lg:px-12 xl:px-20 bg-[rgba(255,255,0,0.03)]">
             {/* Left Section */}
             <div className="text-gray-700">
                 <p className="tracking-[0.3em] sm:tracking-[0.4em] md:tracking-[0.5em] font-semibold">

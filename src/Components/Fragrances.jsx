@@ -48,7 +48,7 @@ const Fragrances = () => {
             <section id="fragrances" className="grid grid-cols-1 lg:grid-cols-2 gap-10
             pt-[6rem]">
                 {/* Left Side  */}
-                <div className="flex flex-col justify-between items-center text-gray-700 px-6 md:px-8 lg:px-8 xl:px-14">
+                <div className="flex flex-col justify-between items-center text-gray-700 px-6 md:px-8 lg:px-8 xl:px-14 order-2 lg:order-1">
                     {/* Text Section */}
                     <div className="text-center">
                         <p className="tracking-[0.3em] sm:tracking-[0.4em] md:tracking-[0.5em] font-semibold">
@@ -98,7 +98,7 @@ const Fragrances = () => {
 
 
                 {/* Right Side Img Slider*/}
-                <div className="flex items-center justify-center gap-1 sm:gap-3 xl:gap-4 2xl:gap-6 pr-2 sm:pr-10 lg:pr-0">
+                <div className="flex items-center justify-center gap-1 sm:gap-3 xl:gap-4 2xl:gap-6 pr-2 sm:pr-10 lg:pr-0 order-1 lg:order-2">
                     {/* Main Image */}
                     <div className="flex-shrink-0 text-center">
                         <img
@@ -110,13 +110,13 @@ const Fragrances = () => {
                     </div>
 
                     {/* Thumbnail Images */}
-                    <div className={`flex items-center gap-1 sm:gap-3 xl:gap-4 2xl:gap-6 ${styles["hide-scrollbar"]} pr-2 sm:pr-6 lg:pr-0`}>
+                    <div className={`flex items-start gap-1 sm:gap-3 xl:gap-4 2xl:gap-6 ${styles["hide-scrollbar"]} pr-2 sm:pr-6 lg:pr-0`}>
                         {images.map((img, index) => (
                             <div key={index} className="flex flex-col flex-shrink-0">
                                 <img
                                     src={img.src}
                                     alt={img.name}
-                                    className={`w-24 h-24 sm:w-36 sm:h-36 md:w-44 md:h-44    lg:w-[8rem] lg:h-[8rem] xl:w-[9rem] xl:h-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full cursor-pointer border-2 transition-all ${index === currentIndex ? "border-blue-500 scale-105" : "border-gray-300"
+                                    className={`w-24 h-24 sm:w-36 sm:h-36 md:w-44 md:h-44    lg:w-[8rem] lg:h-[8rem] xl:w-[9rem] xl:h-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full cursor-pointer border-2 transition-all ${index === currentIndex ? "border-blue-500" : "border-gray-300"
                                         }`}
                                     onClick={() => setCurrentIndex(index)}
                                 />
