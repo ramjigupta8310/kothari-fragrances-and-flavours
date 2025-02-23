@@ -21,14 +21,13 @@ const Home = () => {
 
   const [isOpen, setIsOpen] = useState(false); // For Hamburger Menu
 
-
-  console.log("component is rendering")
-
   return (
-    <div>
+    <div id="home">
+
+      {/* Header Section */}
       <header className="bg-white shadow-md fixed w-full top-0 left-0 z-50">
         <div className="px-[2%] md:px-[4%] py-4 flex justify-between items-center">
-          <Link to="/"><img src='/Logo Kothari1.png' alt="Logo" /></Link>
+          <a href="#home"><img src='/Logo-Kothari.png' alt="Logo" /></a>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex gap-x-8">
@@ -39,14 +38,14 @@ const Home = () => {
             ))}
           </nav>
 
-          {/* Mobile Menu Icon */}
+          {/*Hamburger Mobile Menu Icon */}
           <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-2xl">
             {isOpen ? <FiX /> : <FiMenu />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        <div className={`absolute left-0 w-full bg-white shadow-md transition-all duration-300 overflow-hidden ${isOpen ? "max-h-[300px]" : "max-h-0"}`}>
+        <div className={`lg:hidden absolute left-0 w-full bg-white shadow-md transition-all duration-300 overflow-hidden ${isOpen ? "max-h-[400px]" : "max-h-0"}`}>
           <ul className="flex flex-col gap-y-3 px-4 py-4">
             {navLinks.map((link, i) => (
               <li key={i}>
@@ -68,9 +67,9 @@ const Home = () => {
       </section>
 
       {/* About Us Section */}
-      <section id="about-us" className="py-24 flex justify-center">
-        <div className="text-center max-w-2xl mx-auto text-gray-700 px-6">
-          <p className="tracking-[0.3em] sm:tracking-[0.4em] md:tracking-[0.5em] font-semibold">
+      <section id="about-us" className="py-24 px-4 flex justify-center">
+        <div className="text-center text-gray-700 max-w-[50rem]">
+          <p className="tracking-[0.3rem] sm:tracking-[0.4rem] md:tracking-[0.5rem] font-semibold">
             W h o &nbsp; W E &nbsp; A R E
           </p>
           <h2 className="mt-3 text-2xl md:text-4xl font-semibold text-black">About Us</h2>
@@ -96,21 +95,20 @@ const Home = () => {
       {/* Fragrances Section */}
       <Fragrances />
 
-
       {/* Flavours Section */}
       <Flavours />
 
       {/* Let's Connect Section */}
-      <section id="connect" className="flex justify-center pt-20">
-        <div className="px-8 w-full md:px-0 md:w-[90%] lg:w-[80%] xl:w-[70%]">
+      <section id="connect" className="flex justify-center pt-20 px-3">
+        <div className="px-4 w-full md:w-[90%] lg:w-[80%] xl:w-[70%] p-6 shadow-md rounded-xl border">
           <h2 className="text-2xl md:text-4xl font-semibold text-center">Let’s Connect</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-gray-700 px-6 text-center">
+          <p className="mt-4 max-w-[50rem] mx-auto text-gray-700 px-6 text-center">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
             totam rem aperiam, eaque ipsa quae.
           </p>
 
           <form className="space-y-8 mt-14">
-            {/* First Row (Name,Contact No., Email*/}
+            {/* First Row (Name, Contact No., Email*/}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="relative">
                 <label className="absolute -top-3 left-3 bg-white px-2 text-sm">Name</label>
@@ -146,26 +144,25 @@ const Home = () => {
                 Submit
               </button>
             </div>
-
           </form>
         </div>
       </section>
 
       {/* Contact Us Section*/}
-      <section id="contact" className="my-12 py-16 text-center bg-[rgba(235,235,129,0.2)]">
+      <section id="contact" className="my-12 py-16 text-center bg-[rgba(255,255,0,0.13)]">
         {/* Contact Us Heading */}
         <h2 className="text-2xl md:text-4xl font-semibold">Contact Us</h2>
-        <p className="mt-4 max-w-2xl mx-auto text-gray-700 px-6">
+        <p className="mt-4 max-w-[50rem] mx-auto text-gray-700 px-6">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
           totam rem aperiam, eaque ipsa quae.
         </p>
 
-        {/* Contact Cards */}
+        {/* Contact Us Cards */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:px-12 justify-items-center md:justify-items-stretch">
 
           {/* Location Card */}
-          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center
-          w-[80%] md:w-auto">
+          <div className="bg-white p-6 rounded-xl shadow-md border flex flex-col 
+          items-center w-[80%] md:w-auto">
             <FiMapPin strokeWidth={1.5} className="text-3xl mb-4" />
             <p className="mt-2 text-gray-700">
               Kothari Fragrances & Flavours 613 (Sixth Floor), Anam-1, Opp. Parimal Garden, CG Road, Ahmedabad, Gujarat, India. Pin Code - 380006
@@ -173,21 +170,20 @@ const Home = () => {
           </div>
 
           {/* Phone Card */}
-          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center
-          w-[80%] md:w-auto">
+          <div className="bg-white p-6 rounded-xl shadow-md border flex flex-col 
+          items-center w-[80%] md:w-auto">
             <FiPhone strokeWidth={1.5} className="text-3xl mb-4" />
             <p className="text-gray-700">+91 81411 53374</p>
             <p className="text-gray-700 mt-2">+91 81411 53384</p>
           </div>
 
           {/* Email Card */}
-          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center
-          w-[80%] md:w-auto">
+          <div className="bg-white p-6 rounded-xl shadow-md border flex flex-col 
+          items-center w-[80%] md:w-auto">
             <FiMail strokeWidth={1.5} className="text-3xl mb-4" />
             <a href="mailto:info@kff.co.in" className="hover:underline text-gray-700">info@kff.co.in</a>
             <a href="mailto:sales@kff.co.in" className="hover:underline mt-2 text-gray-700">sales@kff.co.in</a>
           </div>
-
         </div>
       </section>
     </div>

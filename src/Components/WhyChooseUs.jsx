@@ -1,11 +1,22 @@
 import React from 'react'
 
+const boxes = [
+    { number: "01", text: "Flexible MOQ’s" },
+    { number: "02", text: "Futuristic approach" },
+    { number: "03", text: "Quick ideation for the product line" },
+    { number: "04", text: "High Repeat Ratio" },
+    { number: "05", text: "Focus on intangibles" },
+    { number: "06", text: "Gender neutral approach" },
+    { number: "07", text: "Focus on hue not on new" },
+    { number: "08", text: "Ethical Sourcing" },
+];
+
 const WhyChooseUs = () => {
     return (
         <section id="why-choose-us" className="grid grid-cols-1 lg:grid-cols-2 gap-10
-                pt-[6rem] px-6 md:px-8 lg:px-12 xl:px-20 bg-[rgba(235,235,129,0.2)] py-16">
+                pt-[6rem] py-16 px-6 md:px-8 lg:px-12 xl:px-20 bg-[rgba(255,255,0,0.13)]">
             {/* Left Section */}
-            <div className="text-gray-700 ">
+            <div className="text-gray-700">
                 <p className="tracking-[0.3em] sm:tracking-[0.4em] md:tracking-[0.5em] font-semibold">
                     W E &nbsp; CAN &nbsp; D O
                 </p>
@@ -26,17 +37,8 @@ const WhyChooseUs = () => {
 
             {/* Right Section */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                    { number: "01", text: "Flexible MOQ’s" },
-                    { number: "02", text: "Futuristic approach" },
-                    { number: "03", text: "Quick ideation for the product line" },
-                    { number: "04", text: "High Repeat Ratio" },
-                    { number: "05", text: "Focus on intangibles" },
-                    { number: "06", text: "Gender neutral approach" },
-                    { number: "07", text: "Focus on hue not on new" },
-                    { number: "08", text: "Ethical Sourcing" },
-                ].map((item, index) => (
-                    <div key={index} className="flex shadow-md p-2 items-center text-gray-700">
+                {boxes.map((item, index) => (
+                    <div key={index} className="flex shadow-md p-2 rounded-2xl items-center text-gray-700 border">
                         {/*  Left Side: Number (Full Height) */}
                         <p className="text-4xl font-semibold">
                             {item.number}
