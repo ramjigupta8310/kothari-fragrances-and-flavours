@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import Banner from '../Assets/Banner.png'
-import { Link } from "react-router-dom";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import Flavours from "../../Components/Flavours";
 import Fragrances from "../../Components/Fragrances";
@@ -149,7 +148,7 @@ const Home = () => {
       </section>
 
       {/* Contact Us Section*/}
-      <section id="contact" className="my-12 py-16 text-center bg-[rgba(255,255,0,0.03)]">
+      <section id="contact" className="my-12 py-16 text-center bg-[rgba(255,255,0,0.13)]">
         {/* Contact Us Heading */}
         <h2 className="text-2xl md:text-4xl font-semibold">Contact Us</h2>
         <p className="mt-4 max-w-[50rem] mx-auto text-gray-700 px-6">

@@ -15,10 +15,11 @@ const LeftIcons = [
 
 const Fragrances = () => {
     const images = [
-        { src: "/img1.avif", name: "Vanilla Strawberry", description: "Des1" },
-        { src: "/img2.avif", name: "Strawberry Delight", description: "Des2" },
-        { src: "/img3.avif", name: "Mango Bliss Strawberry", description: "Des3" },
-        { src: "/img4.avif", name: "Chocolate Strawberry", description: "Des4" },
+        { src: "/Assets/Fragrances/Slider-Images/img1.avif", name: "Vanilla Strawberry", description: "lorem10Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It ha" },
+
+        { src: "/Assets/Fragrances/Slider-Images/img2.avif", name: "Strawberry Delight", description: "DesThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable." },
+        { src: "/Assets/Fragrances/Slider-Images/img3.avif", name: "Mango Bliss Strawberry", description: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness." },
+        { src: "/Assets/Fragrances/Slider-Images/img4.avif", name: "Chocolate Strawberry", description: " These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided." },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -39,7 +40,7 @@ const Fragrances = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             nextImage();
-        }, 3000);
+        }, 5000);
 
         return () => clearInterval(interval);
     }, []);
